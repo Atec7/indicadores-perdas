@@ -10,49 +10,67 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Gerenciador de Projetos</h1>
-    
-    <button id="exportBtn">Exportar para Excel</button>
-    
-    <form id="targetForm">
-        <label for="nature">Natureza:</label>
-        <input type="text" id="nature" required>
-        <label for="code">Código:</label>
-        <input type="text" id="code" required>
-        <label for="description">Descrição:</label>
-        <input type="text" id="description" required>
-        <label for="date">Data:</label>
-        <input type="date" id="date" required>
-        <label for="category">Categoria:</label>
-        <select id="category" required>
-            <option value="fiscalizacaoAlvoProjeto">Fiscalização Alvo do Projeto</option>
-            <option value="normalizacaoAlvoProjeto">Normalização Alvo do Projeto</option>
-            <option value="fraudeAlvoProjeto">Fraude Alvo do Projeto</option>
+    <section class="topo">
+        <h1 class="h1c">
+            <img class="logo" src="logo22.jpg" alt="">
+            <img class="logo" src="logo_parceira2.png" alt="">
+        </h1>
+        <h1>Indicadores de Perdas - Grupo Partnership<br>Rio Verde/GO</h1>
+    </section>
 
-        </select>
-        <label for="achievedTargets">Quantidade de Alvos Atingidos:</label>
+    <form id="targetForm">
+        <label for="nature"><b>SS/OS/Numero do Serviço:</b></label>
+        <input type="text" id="nature" required>
+        <br><br>
+        <label for="code"><b>Código:</b></label>
+        <input type="text" id="code" required>
+        <br><br>
+        <label for="description"><b>Descrição:</b></label>
+        <input type="text" id="description" required>
+        <br><br>
+        <label for="date"><b>Data:</b></label>
+        <input type="date" id="date" required>
+        <br><br>
+        <label for="achievedTargets"><b>Quantidade de Alvos Atingidos:</b></label>
         <input type="number" id="achievedTargets" required>
-        <label for="team">Equipe:</label>
+        <br><br>
+        <label for="category"><b>Categoria:</b></label>
+        <select id="category" required>
+            <option value="Fiscalização Alvo Projeto">Fiscalização Alvo do Projeto</option>
+            <option value="Normalização Alvo Projeto">Normalização Alvo do Projeto</option>
+            <option value="Fraude Alvo Projeto">Fraude Alvo do Projeto</option>
+        </select>
+        <br><br>
+        <label for="team"><b>Equipe:</b></label>
         <select id="team" required>
             <option value="RIOF001M">RIOF001M</option>
             <option value="RIOF002M">RIOF002M</option>
             <option value="RIOF003M">RIOF003M</option>
             <option value="RIOF004M">RIOF004M</option>
-            <option value="RIOF005M">RIOF005M</option>
             <option value="RIOF006M">RIOF006M</option>
             <option value="RIOF007M">RIOF007M</option>
             <option value="RIOF008M">RIOF008M</option>
             <option value="RIOF009M">RIOF009M</option>
-            <option value="RIOF10M">RIOF10M</option>
-            <option value="RIOF11M">RIOF11M</option>
+            <option value="RIOF010M">RIOF010M</option>
+            <option value="RIOF011M">RIOF011M</option>
         </select>
-        <button type="submit">Adicionar Alvo</button>
+        <br><br>
+        <button class="btnAlvo" type="submit"><b>Adicionar Alvo</b></button>
+        <button class="btnAlvo" id="exportBtn"><b>Exportar para Excel</b></button>
+        <button class="btnAlvo" id="exportBtn"><b><a href="#justificativas">Justificativas</a></b></button>
+        <button class="btnAlvo" id="exportBtn"><b><a href="https://atec7.github.io/Painel-central/index.html">Abrir Gerenciador</a></b></button>
+        
+        
     </form>
-    
+
+    <br><br><br><br><br><br><br><br>
+    <button class="btnAnalitico" onclick="window.location.href='#finalDaPagina'"><b>Visão Analítica</b></button>
+    <br><br>
+
     <table id="recordTable">
         <thead>
             <tr>
-                <th>Natureza</th>
+                <th>SS/OS/Numero do Serviço</th>
                 <th>Código</th>
                 <th>Descrição</th>
                 <th>Data</th>
@@ -64,28 +82,116 @@
         </thead>
         <tbody></tbody>
     </table>
-    
-    <div id="cardsContainer"></div>
-    
-    <div class="card">
-        <h3>Total de Alvos para "Fiscalização Alvo do Projeto"</h3>
-        <canvas id="fiscalizacaoChart"></canvas>
-    </div>
-    <div class="card">
-        <h3>Total de Alvos para "Normalização Alvo do Projeto"</h3>
-        <canvas id="normalizacaoChart"></canvas>
-    </div>
-    <div class="card">
-        <h3>Total de Alvos para "Fraude Alvo do Projeto"</h3>
-        <canvas id="fraudeChart"></canvas>
-    </div>
-    <div class="card">
-        <h3>Total de Alvos Registrados</h3>
-        <canvas id="totalChart"></canvas>
-    </div>
-    <div class="card">
-        <h3>Alvos Atingidos por Mês</h3>
-        <canvas id="monthlyChart" style="width: 1300px; height: 300px;"></canvas>
-    </div>
+
+    <br><br><br><br><br>
+    <div id="finalDaPagina"></div>
+
+    <br>
+    <section class="section">
+        <legend><h2 class="teste"><b>Visão Analítica dos Alvos de 2025</b></h2></legend>
+        <div id="cardsContainer"></div>
+        <div class="card">
+            <h2 class="teste">Fiscalização<br>🔍<br><h2 class="alvos2">Alvos: 15.966</h2></h3>
+            <canvas id="fiscalizacaoChart"></canvas>
+        </div>
+        <div class="card">
+            <h2 class="teste">Normalização<br>📋<br><h2 class="alvos2">Alvos: 3.606</h2></h3>
+            <canvas id="normalizacaoChart"></canvas>
+        </div>
+        <div class="card">
+            <h2 class="teste">para Fraude<br>🚨<br><h2 class="alvos2">Alvos: 1.797</h2></h3>
+            <canvas id="fraudeChart"></canvas>
+        </div>
+        <div class="cardtotal">
+            <h2 class="teste">🎯Alvos Atingidos✅<br><h2 class="alvos2">Alvos: 21.692</h2></h2>
+            <canvas id="totalChart"></canvas>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="teste">
+            <h2 class="teste">Alvos Atingidos ao longo do Ano 🎯</h2>
+            <canvas id="monthlyChart"></canvas>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <section class="">
+        <h2 class="teste">Justificativas dos Alvos</h2>
+        <label for="justificativaDate"><b>Data do Registro:</b></label>
+        <input type="date" id="justificativaDate" required>
+        <br><br>
+        <label for="justificativaCategoria"><b>Categoria:</b></label>
+        <select id="justificativaCategoria" required>
+            <option value="Fiscalização">Fiscalização</option>
+            <option value="Normalização">Normalização</option>
+            <option value="Fraude">Fraude</option>
+        </select>
+        <br><br>
+        <textarea id="justificativas" rows="5" cols="80" placeholder="Insira Numero de SS/OS/Numero do Serviço e detalhe a justificativa..."></textarea>
+        <br>
+        <button class="btnAlvo" id="addJustificativa"><b>Adicionar Justificativa</b></button>
+    </section>
+
+    <section class="">
+        <div id="justificativas"></div>
+        <h2 class="teste">Lista de Justificativas</h2>
+        <table id="justificativaTable">
+            <thead>
+                <tr>
+                    <th>Data do Registro</th>
+                    <th>Categoria</th>
+                    <th>Justificativa</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <br><br><br><br>
 </body>
-</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const justificativaTableBody = document.querySelector('#justificativaTable tbody');
+        const justificativas = JSON.parse(localStorage.getItem('justificativas')) || [];
+
+        const renderTable = () => {
+            justificativaTableBody.innerHTML = '';
+            justificativas.forEach((justificativa, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${justificativa.date}</td>
+                    <td>${justificativa.category}</td>
+                    <td>${justificativa.text}</td>
+                    <td><button onclick="removeJustificativa(${index})">Excluir</button></td>
+                `;
+                justificativaTableBody.appendChild(row);
+            });
+        };
+
+        document.getElementById('addJustificativa').addEventListener('click', function() {
+            const date = document.getElementById('justificativaDate').value;
+            const category = document.getElementById('justificativaCategoria').value;
+            const text = document.getElementById('justificativas').value;
+
+            if (date && category && text) {
+                justificativas.push({ date, category, text });
+                localStorage.setItem('justificativas', JSON.stringify(justificativas));
+                renderTable();
+                alert('Justificativa adicionada com sucesso!');
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+
+        window.removeJustificativa = (index) => {
+            justificativas.splice(index, 1);
+            localStorage.setItem('justificativas', JSON.stringify(justificativas));
+            renderTable();
+            alert('Justificativa removida com sucesso!');
+        };
+
+        renderTable();
+    });
+</script>
+</html[_{{{CITATION{{{_1{](https://github.com/ricardo-cas/pandas/tree/eefd8f3ed9250c15e029b7ae59a24ef9f7ffc4ab/GUIA_MARKDOWN.MD)
