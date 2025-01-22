@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    width: 80%;
+    padding-left: 130px;
+}
+.cardtotal {
+    border: 1px solid greenyellow;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    display: inline-block;
+    vertical-align: top;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    height: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+.card h3 {
+    margin-top: 0;
+}
+.card canvas {
+    max-width: 100%;
+}
+form {
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+}
+th, td {
+    border: 1px solid green;
+    padding: 8px;
+    text-align: left;
+    border-radius: 10px;
+}
+th {
+    background-color: green;
+    color: white;
+}
+button {
+    margin-top: 10px;
+}
+#exportBtn {
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+    padding-left: 100px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding-top: 84px;
+    font-size: 36px;
+    width: 100%;
+}
+.h1c{
+    width: 80px;
+    text-align: left;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+h2{
+    text-align: left;
+}
+label{
+    width: 50%;
+    font-size: 18px;
+    padding: 10px;
+    border-style: solid;
+    border-color: green;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+input{
+    font-size: 18px;
+    padding: 10px;
+    border:  5px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 100%;
+    border-color: green;
+}
+select{
+    font-size: 18px;
+    padding: 10px;
+    border-style: solid;
+    border-color: green;
+    background-color: greenyellow;
+    color: black;
+    border-radius: 10px;
+    width: 150px;
+}
+.btnAnalitico {
+    text-align: center;
+    position: inherit;
+    align-items: center;
+    font-size: 21px;
+    padding: 10px;
+    border-style: solid;
+    border-color: green;
+    background-color: greenyellow;
+    color: green;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.btnAnalitico:hover {
+    background-color: lightgreen;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+.btnAlvo{
+    text-align: center;
+    position: inherit;
+    align-items: center;
+    font-size: 21px;
+    padding: 10px;
+    border-style: solid;
+    border-color: green;
+    background-color: greenyellow;
+    color: green;
+    border-radius: 10px;
+    width: 300px;
+}
+.btnAlvo:hover {
+    background-color: lightgreen;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+.teste{
+    width: 100%;
+    text-align: center;
+}
+.section{
+    text-align: center;
+    border: solid;
+    border-color: greenyellow;
+    border-radius: 20px;
+}
+.logo{
+    width: 80px;
+    border-radius: 100%;
+    
+}
+.topo{
+    display: flex;
+}
+.alvos2{
+    text-align: center;
+    color: #1234;
+    background-color: white;
+    border-color: greenyellow;
+    border-radius: 15px;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: green;
+}
